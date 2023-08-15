@@ -8,7 +8,6 @@ let model;
 async function loadModel() {
   model = await cocoSsd.load();
   root.classList.remove("blur");
-  video.classList.remove("removed");
   loader.classList.add("removed");
 }
 loadModel();
@@ -24,7 +23,7 @@ isGetUserMediaSupported
 
 async function accessWebCam() {
   if (!model) return;
-
+  video.classList.remove("removed");
   webcamAccessBtn.classList.add("removed");
 
   const constraints = {

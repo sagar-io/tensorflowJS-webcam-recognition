@@ -24,7 +24,9 @@ body {
 .removed {
     display: none;
 }
-
+.description {
+    max-width: 900px;
+}
 .special-text {
     background-color: #4158D0;
     padding: 2px;
