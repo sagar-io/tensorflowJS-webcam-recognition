@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+    margin: 0;
+    background-color: rgb(38, 34, 76);
+    color: whitesmoke;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.4;
+    word-spacing: 1px;
+}
+
+/* utility classes */
+.blur {
+    filter: opacity(0.1);
+}
+
+.removed {
+    display: none;
+}
+.description {
+    max-width: 900px;
+}
+.special-text {
+    background-color: #4158D0;
+    padding: 2px;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);    
+}
+
+div#root {
+    transition: opacity 250ms ease-in-out;
+}
+
+#webcam-btn {
+    padding: 0.25rem 1rem;
+    border-radius: 99999px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 6px 6px 5px 1px rgb(9, 51, 218);
+    transition: transform 0.25s ease-in-out;
+    height: 45px;
+}
+#webcam-btn:hover {
+    box-shadow: 10px 10px 5px 1px rgb(9, 51, 218);
+    transform: translate(-5px, -5px);
+}
+
+#webcam {
+    width: 600px;
+    aspect-ratio: 1/1;
+}
+
+video {
+    display: block;
+}
+
+.camView {
+    position: relative;
+    float: left;
+    width: calc(100% - 20px);
+    margin: 10px;
+}
+
+.camView p {
+    position: absolute;
+    padding: 5px;
+    background-color: rgba(255, 111, 0, 0.85);
+    color: #FFF;
+    border: 1px dashed rgba(255, 255, 255, 0.7);
+    z-index: 2;
+    font-size: 12px;
+}
+
+.highlighter {
+    background: rgba(163, 225, 29, 0.25);
+    border: 1px dashed #fff;
+    z-index: 1;
+    position: absolute;
+}
